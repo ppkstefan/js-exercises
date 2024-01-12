@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Cart</title>
+  </head>
+  <body>
+    <p>CART</p>
+    <button onclick="console.log('Quantity: '+ Quantity);">Show Cart</button>
+    <button
+      onclick="
+    Quantity++;
+    console.log('Quantity: '+ Quantity);"
+    >
+      add to cart
+    </button>
+
+    <button
+      onclick="
+    Quantity+=2;
+    console.log('Quantity: '+ Quantity);"
+    >
+      +2
+    </button>
+
+    <button
+      onclick="
+    Quantity+=3;
+    console.log('Quantity: '+ Quantity);"
+    >
+      +3
+    </button>
+
+    <button
+      onclick="
+    Quantity=0;
+    console.log('Quantity: '+ Quantity);"
+    >
+      reset
+    </button>
+
+    <script>
+      let Quantity = 0;
+    </script>
+  </body>
+</html>
