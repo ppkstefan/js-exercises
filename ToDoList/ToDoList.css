@@ -1,0 +1,24 @@
+body{
+    font-family: Arial, Helvetica, sans-serif;
+}
+.list, .ToDoinput{
+    display: grid;
+    grid-template-columns: 200px 150px 100px;
+    column-gap: 10px;
+    row-gap: 10px;
+}
+.ToDoinput{
+    margin-bottom: 10px;
+}
+.addButton{
+    background-color: rgb(13, 151, 52);
+    color: aliceblue;
+    border: none;
+    padding: 3px;
+}
+button{
+    background-color: rgb(151, 24, 13);
+    color: aliceblue;
+    border: none;
+    padding: 3px;
+}

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Booleans</title>
+    <style>
+      .js-subscribe {
+        border: none;
+        border-radius: 20px;
+        padding: 10px;
+        background-color: black;
+        color: aliceblue;
+      }
+      .onPressSub {
+        background-color: aliceblue;
+        color: black;
+      }
+    </style>
+  </head>
+  <body>
+    <p>YouTube</p>
+    <button
+      onclick="
+       Subscribe();
+    "
+      class="js-subscribe"
+    >
+      Subscribe
+    </button>
+
+    <script>
+      function Subscribe() {
+        const elementButton = document.querySelector(".js-subscribe");
+        if (elementButton.innerText === "Subscribe") {
+          elementButton.innerHTML = "Subscribed";
+          elementButton.classList.add("onPressSub");
+        } else {
+          elementButton.innerHTML = "Subscribe";
+          elementButton.classList.remove("onPressSub");
+        }
+      }
+    </script>
+  </body>
+</html>

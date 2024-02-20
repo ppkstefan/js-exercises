@@ -1,0 +1,56 @@
+.titleProject {
+    color: rgb(254, 254, 254);
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 400;
+    size: 40px;
+  }
+  body {
+    background-color: rgb(25, 25, 25);
+    margin-right: 100px;
+  }
+  .butoane {
+    background: none;
+    border-radius: 200px;
+    border-color: aliceblue;
+    border-width: 5px;
+    height: 200px;
+    width: 200px;
+    cursor: pointer;
+  }
+  .imgIcons {
+    height: 150px;
+    width: 150px;
+  }
+  .picked,
+  .score,
+  .result {
+    color: aliceblue;
+    font-weight: 900;
+    margin-bottom: 10px;
+  }
+  .result {
+    font-size: 30px;
+    margin-bottom: 20px;
+  }
+  .score,
+  .picked {
+    margin-bottom: 20px;
+    font-size: 17px;
+  }
+  .reset , .auto{
+    background-color: aliceblue;
+    padding: 15px;
+    border-radius: 20px;
+    padding-left: 25px;
+    padding-right: 25px;
+    font-weight: 700;
+    cursor: pointer;
+    font-size: large;
+  }
+  .imgScore {
+    height: 70px;
+    width: 70px;
+  }
+  .divScore {
+    margin-left: 10px;
+  }

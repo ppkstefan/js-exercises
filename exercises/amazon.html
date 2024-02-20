@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Amazoancele</title>
+    <style>
+      .search {
+        padding: 5px;
+        text-size-adjust: 18px;
+      }
+    </style>
+  </head>
+  <body>
+    <p>Amazon Shipping</p>
+
+    <p>if price sub 40$ => +10$ shipping</p>
+    <p>if price > 40$ shipping gratis</p>
+    <input
+      placeholder="Cost of order"
+      class="search"
+      onkeydown="
+    if(event.key=='Enter')
+    {
+        let valueSearch = document.querySelector('.search');
+        const r=document.querySelector('.calc').innerHTML = calculator(Number(valueSearch.value)) + '$';
+    }
+    "
+    />
+    <button
+      onclick="
+              let valueSearch = document.querySelector('.search');
+        const r=document.querySelector('.calc').innerHTML = calculator(Number(valueSearch.value)) + '$';
+    "
+      class="utton"
+    >
+      Calculate
+    </button>
+    <p class="calc"></p>
+    <script>
+      function calculator(valuee) {
+        if (valuee >= 40) return valuee;
+        else valuee = valuee + 10;
+        return valuee;
+      }
+    </script>
+  </body>
+</html>

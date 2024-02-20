@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Apple Calculator</title>
+    <style>
+      body {
+        background-color: rgb(0, 0, 0);
+        font-family: Arial, Helvetica, sans-serif;
+      }
+      .title {
+        color: aliceblue;
+      }
+      .number,
+      .sign {
+        border-radius: 1000px;
+        padding: 20px;
+        padding-top: 15px;
+        padding-bottom: 15px;
+        margin: 3px;
+        cursor: pointer;
+        background-color: gray;
+        font-weight: 800;
+        color: aliceblue;
+        border: none;
+      }
+      .sign {
+        background-color: orange;
+      }
+      .clear {
+        margin: 10px;
+        margin-left: 3px;
+        border: none;
+        border-radius: 20px;
+        padding: 30px;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        font-size: large;
+        font-weight: 700;
+        background-color: rgb(81, 79, 79);
+        color: aliceblue;
+      }
+      .calculator {
+        margin: 5px;
+        color: aliceblue;
+        font-size: medium;
+        font-weight: 700;
+      }
+    </style>
+  </head>
+  <body>
+    <h1 class="title">CALCULATOR</h1>
+    <div>
+      <p class="calculator"></p>
+    </div>
+    <div>
+      <button
+        class="number"
+        onclick="
+        signOf='';
+        displayCalc= Calculator(1,displayCalc,signOf);
+      "
+      >
+        1
+      </button>
+      <button
+        class="number"
+        onclick="
+        signOf='';
+        displayCalc=Calculator(2,displayCalc,signOf);
+      "
+      >
+        2
+      </button>
+      <button
+        class="number"
+        onclick="
+        signOf='';
+        displayCalc=Calculator(3,displayCalc,signOf);
+      "
+      >
+        3
+      </button>
+      <button
+        class="sign"
+        onclick="
+        signOf='+';
+        displayCalc=Calculator(9,displayCalc,signOf);
+    "
+      >
+        +
+      </button>
+    </div>
+    <div>
+      <button
+        class="number"
+        onclick="
+        signOf='';
+        displayCalc=Calculator(4,displayCalc,signOf);
+    "
+      >
+        4
+      </button>
+      <button
+        class="number"
+        onclick="
+        signOf='';
+        displayCalc=Calculator(5,displayCalc,signOf);   
+    "
+      >
+        5
+      </button>
+      <button
+        class="number"
+        onclick="
+        signOf='';
+        displayCalc=Calculator(6,displayCalc,signOf);
+        
+    "
+      >
+        6
+      </button>
+      <button
+        class="sign"
+        onclick="
+        signOf='-';
+        displayCalc=Calculator(9,displayCalc,signOf);
+    "
+      >
+        -
+      </button>
+    </div>
+    <div>
+      <button
+        class="number"
+        onclick="
+        signOf='';
+        displayCalc=Calculator(7,displayCalc,signOf);
+        
+    "
+      >
+        7
+      </button>
+      <button
+        class="number"
+        onclick="
+        signOf='';
+        displayCalc=Calculator(8,displayCalc,signOf);
+        
+    "
+      >
+        8
+      </button>
+      <button
+        class="number"
+        onclick="
+        signOf='';
+        displayCalc=Calculator(9,displayCalc,signOf);
+    "
+      >
+        9
+      </button>
+      <button
+        class="sign"
+        onclick="
+         signOf='*';
+         displayCalc=Calculator(9,displayCalc,signOf);
+    "
+      >
+        *
+      </button>
+    </div>
+    <div>
+      <button
+        class="number"
+        onclick="
+        displayCalc=Calculator(0,displayCalc,signOf);
+    "
+      >
+        0
+      </button>
+      <button
+        class="number"
+        onclick="
+    "
+      >
+        .
+      </button>
+      <button class="number">=</button>
+      <button
+        class="sign"
+        onclick="
+      displayCalc=displayCalc+'/';
+    const value=document.querySelector('.calculator');
+    value.innerHTML=displayCalc;
+    "
+      >
+        /
+      </button>
+    </div>
+    <div>
+      <button
+        class="clear"
+        onclick="
+      displayCalc='';
+      const value=document.querySelector('.calculator');
+    value.innerHTML=displayCalc;
+      "
+      >
+        clear
+      </button>
+    </div>
+    <script>
+      let displayCalc = "";
+      let signOf = "";
+      function Calculator(value1, displayCalc, signOf) {
+        if (signOf === "") {
+          displayCalc = displayCalc * 10 + value1;
+          const value = document.querySelector(".calculator");
+          value.innerHTML = displayCalc;
+          return displayCalc;
+        } else {
+          displayCalc = result(signOf, displayCalc, value1);
+          value.innerHTML = displayCalc;
+          signOf = "";
+          displayCalc = "";
+          return displayCalc;
+        }
+      }
+      function result(signOf, displayCalc, value1) {
+        {
+          if (signOf === "+") displayCalc += value1;
+          if (signOf === "-") displayCalc -= value1;
+          if (signOf === "*") displayCalc *= value1;
+          if (signOf === "/") displayCalc /= value1;
+          return displayCalc;
+        }
+      }
+    </script>
+  </body>
+</html>
